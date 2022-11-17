@@ -72,7 +72,7 @@ const getJob = async keyword => {
   return jobs
 }
 
-const crawlingJob = async keyword => {
+const crawlingJob = async (keyword, email) => {
   const jobs = await getJob(keyword)
 
   const h = []
@@ -107,8 +107,8 @@ const crawlingJob = async keyword => {
 
   const emailData = {
     from: 'leesh68481@gmail.com',
-    to: 'leesh68481@gmail.com',
-    subject: 'React.js 구인 회사 정보',
+    to: email,
+    subject: `${keyword} 구인 회사 정보`,
     html: h.join(''),
   }
 
@@ -132,7 +132,7 @@ app.listen(3000, () => {
 // })
 
 app.post('/post', function (요청, 응답) {
-  console.log(요청.body.keyword)
-  crawlingJob(요청.body.keyword)
+  console.log(요청.body)
+  crawlingJob(요청.body.keyword, 요청.body.email)
   응답.send('전송완료')
 })
