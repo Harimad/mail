@@ -1,0 +1,88 @@
+// google font
+
+// Realeway
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+//Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//Black Han Sans
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  .navbar-brand {
+    font-family: 'Raleway', sans-serif;
+  }
+}
+li {
+  list-style: none;
+}
+
+#carouselExampleInterval {
+  top: 56px;
+  & .carousel-inner {
+    height: 500px;
+  }
+  .carousel-caption {
+    top: 180px;
+    height: 150px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Black Han Sans', sans-serif;
+    color: #282a3a;
+    & span {
+      color: #3ab0ff;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.container {
+  margin-top: 90px;
+
+  #features {
+    border: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+  }
+  #inputBox {
+    border: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+footer {
+  position: relative;
+  padding: 20px;
+  background: #eee;
+
+  & ul {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    li {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #carouselExampleInterval .carousel-inner {
+    height: 100%;
+  }
+}

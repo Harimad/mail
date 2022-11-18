@@ -5,29 +5,203 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>JJab Korea</title>
+	<!-- fontawecome cdn -->
+	<!-- <script src="https://kit.fontawesome.com/fb38926c9b.js" crossorigin="anonymous"></script> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
 
 	<body>
-		<!-- Way 1 - form -->
-		<!-- <form action="http://localhost:3000/post" method="post">
-			<label>키워드</label>
-			<input type="text" name="keyword" autocomplete="off">
-			<button>Submit</button>
-		</form> -->
+		<!-- Navbar -->
+		<nav class="navbar navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><i class="fa-solid fa-seedling"></i>SeSAC
+					Mailer</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+					aria-controls="offcanvasDarkNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+					aria-labelledby="offcanvasDarkNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+							aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#features">Features</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="#inputBox">Service</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false">
+									TIPS
+								</a>
+								<ul class="dropdown-menu dropdown-menu-dark">
+									<li><a class="dropdown-item disabled" href="#">원하는 구직 플랫폼에서 검색해 보세요!</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form class="d-flex mt-3" role="search" action="https://www.rocketpunch.com/search" method="GET"
+							target="_blank">
+							<input class="form-control me-2" type="search" name="keywords" placeholder="Rocket Punch 검색"
+								aria-label="Search" autocomplete="off">
+							<button class="btn btn-secondary" type="submit">Search</button>
+						</form>
+						<form class="d-flex mt-3" role="search" action="https://www.wanted.co.kr/search" method="GET"
+							target="_blank">
+							<input class="form-control me-2" type="search" name="query" placeholder="Wanted 검색" aria-label="Search"
+								autocomplete="off">
+							<button class="btn btn-light" type="submit">Search</button>
+						</form>
+						<form class="d-flex mt-3" role="search" action="https://www.jobkorea.co.kr/Search/" method="GET"
+							target="_blank">
+							<input class="form-control me-2" type="search" name="stext" placeholder="JobKorea 검색" aria-label="Search"
+								autocomplete="off">
+							<button class="btn btn-info" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</nav>
 
-		<!-- Way 2  -->
-		<form id="inputBox">
-			<label for="userKeyword">키워드</label>
-			<input type="text" id="userKeyword" name="keyword" autocomplete="off" tabindex="1">
-			<br>
-			<label for="userEmail">이메일</label>
-			<input type="text" id="userEmail" name="email" autocomplete="off" tabindex="2">
-			<br>
-			<button id="keywordBtn" tabindex="3	">Submit</button>
-		</form>
+		<!-- Carousel -->
+		<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="8000">
+					<img src="src/img/success.jpg" class="d-block w-100" alt="sucess image">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>예비&신입 개발자를 위한 <br><span>구인회사 정보 메일링 서비스</span>입니다.</h2>
+						<h4>잡코리아에서 신입, 경력무관한 정보만 필터링 해서 메일을 보냅니다.</h4>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="6000">
+					<img src="src/img/work.jpg" class="d-block w-100" alt="work image">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>어떤 회사를 검색해야할지 모르시겠나요?</h2>
+						<h4>그렇다면 <span>SeSAC Mailing</span> 서비스를 받아보세요!</h4>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="src/img/present.jpg" class="d-block w-100" alt="present image">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>무료 입니다!</h2>
+						<h4>SeSAC Mailing은 개발자 구인 공고를 찾아보는 시간을 줄여주는<br> <span>유용한 도구</span>입니다!</h4>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<!-- Container -->
+		<div class="container mb-5">
+			<!-- Features -->
+			<div id="features" class="mb-5">
+				<h2 class="mb-3">Features</h2>
+				<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+					<div class="col">
+						<div class="card h-100">
+							<img src="https://via.placeholder.com/150/000000/FFFFFF/?text=TEST 1" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="https://via.placeholder.com/150/000000/FFFFFF/?text=TEST 2" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="https://via.placeholder.com/150/000000/FFFFFF/?text=TEST 3" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This card has even longer content than the first to show that equal height action.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- form -->
+			<form id="inputBox">
+				<h2>Service</h2>
+				<label for="userKeyword" class="form-label">Keyword</label>
+				<input type="text" id="userKeyword" class="form-control" name="keyword" aria-describedby="passwordHelpInline"
+					autocomplete="off" tabindex="1">
+				<div id="passwordHelpInline" class="form-text">Please input your searching keyword you want to get job info
+				</div>
+
+				<br>
+				<label for="userEmail" class="form-label">Email</label>
+				<input type="text" id="userEmail" class="form-control" name="email" aria-describedby="emailHelp"
+					autocomplete="off" tabindex="2">
+				<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+				<br>
+				<div class="d-grid gap-2 col-6 mx-auto">
+					<button id="keywordBtn" class="btn btn-outline-info btn-lg" tabindex="3	">Submit</button>
+					<button id="clearBtn" class="btn btn-outline-warning btn-lg">Clear</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<ul>
+				<li><i class="fa-brands fa-github"></i></li>
+				<li><i class="fa-brands fa-blogger"></i></li>
+				<li><i class="fa-regular fa-envelope"></i></li>
+				<li><i class="fa-solid fa-phone"></i></li>
+			</ul>
+			<p class="text-center mt-3">Designed by SeongHyeon</p>
+		</footer>
+
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"></script>
 		<!-- sweetalert2 cdn -->
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="src/keywords.js"></script>

@@ -2,7 +2,7 @@ const $inputBox = document.querySelector('#inputBox')
 const $userKeyword = document.querySelector('#userKeyword')
 const $userEmail = document.querySelector('#userEmail')
 const $keywordBtn = document.querySelector('#keywordBtn')
-
+const $clearBtn = document.querySelector('#clearBtn')
 const inputClear = () => {
   $userKeyword.value = ''
   $userEmail.value = ''
@@ -22,7 +22,7 @@ $inputBox.addEventListener('submit', e => {
   e.preventDefault()
 
   Swal.fire({
-    title: '확실한가요?',
+    title: '메일링 서비스를 받으시겠습니까?',
     text: '해당 정보로 이메일을 발송합니다!',
     icon: 'warning',
     showCancelButton: true,
@@ -31,7 +31,11 @@ $inputBox.addEventListener('submit', e => {
     confirmButtonText: 'Yes!',
   }).then(result => {
     if (result.isConfirmed) {
-      Swal.fire('성공!', '이메일이 발송 되었습니다.', 'success')
+      Swal.fire(
+        '성공!',
+        '이메일이 발송 되었습니다. 취업 성공을 기원합니다!',
+        'success'
+      )
       if (
         !$userKeyword.value.trim() ||
         keywords.indexOf($userKeyword.value) === -1
@@ -65,10 +69,12 @@ $inputBox.addEventListener('submit', e => {
         .then(res => res.json())
         .then(data => console.log(JSON.stringify(data)))
         .catch(err => console.log(err))
-
-      inputClear()
     } else {
       Swal.fire('취소 되었습니다.', '다시 시도해 보세요.', 'info')
     }
   })
+})
+
+$clearBtn.addEventListener('click', () => {
+  inputClear()
 })
