@@ -19,6 +19,11 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #carouselExampleInterval {
   top: 56px;
 }
@@ -70,6 +75,10 @@ footer ul {
 }
 footer ul li {
   font-size: 1.5rem;
+  transition: all 0.3s ease-in;
+}
+footer ul li:hover {
+  transform: scale(1.3);
 }
 
 @media screen and (max-width: 768px) {

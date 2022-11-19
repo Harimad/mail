@@ -24,6 +24,10 @@ nav {
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 #carouselExampleInterval {
   top: 56px;
@@ -77,6 +81,10 @@ footer {
 
     li {
       font-size: 1.5rem;
+      transition: all 0.3s ease-in;
+    }
+    li:hover {
+      transform: scale(1.3);
     }
   }
 }
