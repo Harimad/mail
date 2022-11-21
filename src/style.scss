@@ -89,8 +89,27 @@ footer {
   }
 }
 
+#arrowUp {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  font-size: 3rem;
+  width: 4rem;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 9999;
+  color: #3f51b5; /* 색상변경*/
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   #carouselExampleInterval .carousel-inner {
     height: 100%;
+  }
+  #arrowUp {
+    font-size: 2rem;
+    right: 1px;
   }
 }

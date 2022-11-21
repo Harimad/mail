@@ -3,6 +3,8 @@ const $userKeyword = document.querySelector('#userKeyword')
 const $userEmail = document.querySelector('#userEmail')
 const $keywordBtn = document.querySelector('#keywordBtn')
 const $clearBtn = document.querySelector('#clearBtn')
+const $arrowUp = document.querySelector('#arrowUp')
+
 const inputClear = () => {
   $userKeyword.value = ''
   $userEmail.value = ''
@@ -78,3 +80,23 @@ $inputBox.addEventListener('submit', e => {
 $clearBtn.addEventListener('click', () => {
   inputClear()
 })
+
+const goToTop = () => {
+  window.addEventListener('scroll', () => {
+    if (document.querySelector('html').scrollTop > 100) {
+      $arrowUp.style.display = 'block'
+    } else {
+      $arrowUp.style.display = 'none'
+    }
+  })
+
+  $arrowUp.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
+  })
+}
+
+goToTop()
